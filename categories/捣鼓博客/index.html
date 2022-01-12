@@ -30,26 +30,22 @@
 
 
 
-<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- 主题依赖的图标库，记得改就完了 -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pockjobs@1.0.8/font_1749284_ba1fz6golrf.css" media="defer" onload="this.media='all'">
 
-<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pockjobs@1.0.7/font.css" media="defer" onload="this.media='all'">
 
-
-
-<link rel="stylesheet" href="https://unpkg.zhimg.com/pockjobs@1.0.7/font.css">
-
-
-<link  rel="stylesheet" href="https://unpkg.zhimg.com/pockjobs@1.0.3/main.css" />
+<link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pockjobs@1.0.3/main.css" />
 
 <!-- 自定义样式保持在最底部 -->
 
 
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
-    var CONFIG = {"hostname":"example.com","root":"/","version":"1.8.14","typing":{"enable":true,"typeSpeed":70,"cursorChar":".","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":false,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"https://unpkg.zhimg.com/packphoto@3.0.2/load.gif","onlypost":true,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.8.14","typing":{"enable":true,"typeSpeed":70,"cursorChar":".","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":"✏️"},"progressbar":{"enable":false,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"https://unpkg.zhimg.com/packphoto@3.0.2/load.gif","onlypost":true,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
   </script>
-  <script  src="https://unpkg.zhimg.com/pockjobs@1.0.2/utils.js" ></script>
-  <script  src="https://unpkg.zhimg.com/pockjobs@1.0.2/color-schema.js" ></script>
+  <script  src="https://cdn.jsdelivr.net/npm/pockjobs@1.0.3/utils.js" ></script>
+  <script  src="https://cdn.jsdelivr.net/npm/pockjobs@1.0.3/color-schema.js" ></script>
 <meta name="generator" content="Hexo 5.4.0"></head>
 
 
@@ -174,7 +170,7 @@
                 
 
 <div class="list-group">
-  <p class="h4">共计 1 篇文章</p>
+  <p class="h4">共计 2 篇文章</p>
   <hr>
   
   
@@ -182,9 +178,15 @@
       
       <p class="h5">2022</p>
     
-    <a href="/2022/01/11/4/" class="list-group-item list-group-item-action">
+    <a href="/2022/01/12/4/" class="list-group-item list-group-item-action">
       <span class="archive-post-title">体系化的自动部署</span>
-      <time style="float: right;">01-11</time>
+      <time style="float: right;">01-12</time>
+    </a>
+  
+    
+    <a href="/2022/01/12/5/" class="list-group-item list-group-item-action">
+      <span class="archive-post-title">优化后的结果</span>
+      <time style="float: right;">01-12</time>
     </a>
   
 </div>
@@ -228,8 +230,8 @@
 
 <script  src="https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js" ></script>
 <script  src="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/js/bootstrap.min.js" ></script>
-<script  src="https://unpkg.zhimg.com/pockjobs@1.0.2/events.js" ></script>
-<script  src="https://unpkg.zhimg.com/pockjobs@1.0.2/plugins.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/pockjobs@1.0.3/events.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/pockjobs@1.0.3/plugins.js" ></script>
 
 <!-- Plugins -->
 
@@ -277,7 +279,28 @@
 
 
 <!-- 主题的启动项 保持在最底部 -->
-<script  src="https://unpkg.zhimg.com/pockjobs@1.0.2/boot.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/pockjobs@1.0.3/boot.js" ></script>
+
+
+
+<script>
+if('serviceWorker' in navigator){
+    //判断浏览器是否支持
+    window.addEventListener('load',function(){
+       // window在加载的时候来注册“sw.js”这个文件。这个文件就是serviceWorker
+        navigator.serviceWorker.register('/sw.js',{scope: '/'})
+            .then(registration => {
+                // 返回一个promise
+                console.log("成功！");
+                console.log(registration)
+            })
+            .catch(err => {
+                console.log("失败")
+                console.log(err)
+            })
+    })
+}
+</script>
 
 
 </body>

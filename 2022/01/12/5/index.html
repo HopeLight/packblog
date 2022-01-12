@@ -16,21 +16,21 @@
   <meta name="author" content="">
   <meta name="keywords" content="">
   
-    <meta name="description" content="絮叨两句             好,先让我B两句,经过了半天的折腾,我终于搞定了这个方便的一体化部署             整体架构整个体系分为三块(HexoPlusPlus,Webhooks,Github Action)              静态页面仓库创建                         源码仓库创建                          HexoPlus">
+    <meta name="description" content="Network情况经过几天的优化，最终已经变成了这样">
 <meta property="og:type" content="article">
-<meta property="og:title" content="体系化的自动部署">
-<meta property="og:url" content="http://example.com/2022/01/11/4/index.html">
+<meta property="og:title" content="优化后的结果">
+<meta property="og:url" content="http://example.com/2022/01/12/5/index.html">
 <meta property="og:site_name" content="HopeBlog">
-<meta property="og:description" content="絮叨两句             好,先让我B两句,经过了半天的折腾,我终于搞定了这个方便的一体化部署             整体架构整个体系分为三块(HexoPlusPlus,Webhooks,Github Action)              静态页面仓库创建                         源码仓库创建                          HexoPlus">
+<meta property="og:description" content="Network情况经过几天的优化，最终已经变成了这样">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://unpkg.zhimg.com/packphoto@3.0.6/Life/7.webp">
-<meta property="article:published_time" content="2022-01-11T16:26:53.842Z">
-<meta property="article:modified_time" content="2022-01-11T16:26:53.842Z">
+<meta property="og:image" content="https://unpkg.zhimg.com/packphoto@3.0.7/Life/10.webp">
+<meta property="article:published_time" content="2022-01-12T06:55:47.430Z">
+<meta property="article:modified_time" content="2022-01-12T06:55:47.430Z">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://unpkg.zhimg.com/packphoto@3.0.6/Life/7.webp">
+<meta name="twitter:image" content="https://unpkg.zhimg.com/packphoto@3.0.7/Life/10.webp">
   
   
-  <title>体系化的自动部署 - HopeBlog</title>
+  <title>优化后的结果 - HopeBlog</title>
 
   <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/css/bootstrap.min.css" />
 
@@ -51,26 +51,22 @@
   
 
 
-<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- 主题依赖的图标库，记得改就完了 -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pockjobs@1.0.8/font_1749284_ba1fz6golrf.css" media="defer" onload="this.media='all'">
 
-<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pockjobs@1.0.7/font.css" media="defer" onload="this.media='all'">
 
-
-
-<link rel="stylesheet" href="https://unpkg.zhimg.com/pockjobs@1.0.7/font.css">
-
-
-<link  rel="stylesheet" href="https://unpkg.zhimg.com/pockjobs@1.0.3/main.css" />
+<link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pockjobs@1.0.3/main.css" />
 
 <!-- 自定义样式保持在最底部 -->
 
 
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
-    var CONFIG = {"hostname":"example.com","root":"/","version":"1.8.14","typing":{"enable":true,"typeSpeed":70,"cursorChar":".","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":false,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"https://unpkg.zhimg.com/packphoto@3.0.2/load.gif","onlypost":true,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.8.14","typing":{"enable":true,"typeSpeed":70,"cursorChar":".","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":"✏️"},"progressbar":{"enable":false,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"https://unpkg.zhimg.com/packphoto@3.0.2/load.gif","onlypost":true,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
   </script>
-  <script  src="https://unpkg.zhimg.com/pockjobs@1.0.2/utils.js" ></script>
-  <script  src="https://unpkg.zhimg.com/pockjobs@1.0.2/color-schema.js" ></script>
+  <script  src="https://cdn.jsdelivr.net/npm/pockjobs@1.0.3/utils.js" ></script>
+  <script  src="https://cdn.jsdelivr.net/npm/pockjobs@1.0.3/color-schema.js" ></script>
 <meta name="generator" content="Hexo 5.4.0"></head>
 
 
@@ -170,7 +166,7 @@
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
           <div class="page-header text-center fade-in-up">
-            <span class="h2" id="subtitle" title="体系化的自动部署">
+            <span class="h2" id="subtitle" title="优化后的结果">
               
             </span>
 
@@ -180,8 +176,8 @@
   
     <span class="post-meta">
       <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-      <time datetime="2022-01-11 16:26" pubdate>
-        2022年1月11日 下午
+      <time datetime="2022-01-12 06:55" pubdate>
+        2022年1月12日 早上
       </time>
     </span>
   
@@ -191,7 +187,7 @@
   
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      1.8k 字
+      26 字
     </span>
   
 
@@ -200,7 +196,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      15 分钟
+      1 分钟
     </span>
   
 
@@ -229,62 +225,16 @@
         <div class="py-5" id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">体系化的自动部署</h1>
+            <h1 style="display: none">优化后的结果</h1>
             
               <p class="note note-info">
                 
-                  本文最后更新于：2022年1月11日 下午
+                  本文最后更新于：2022年1月12日 早上
                 
               </p>
             
             <div class="markdown-body">
-              <h3 id="絮叨两句"><a href="#絮叨两句" class="headerlink" title="絮叨两句"></a>絮叨两句</h3><div class="note note-warning">
-            <p>好,先让我B两句,经过了半天的折腾,我终于搞定了这个方便的一体化部署</p>
-          </div>
-
-<h2 id="整体架构"><a href="#整体架构" class="headerlink" title="整体架构"></a>整体架构</h2><p>整个体系分为三块(HexoPlusPlus,Webhooks,Github Action)</p>
-<div>
-            <input type="checkbox" disabled checked="checked">静态页面仓库创建
-          </div>
-<div>
-            <input type="checkbox" disabled checked="checked">源码仓库创建
-          </div> 
-<div>
-            <input type="checkbox" disabled checked="checked">HexoPlusPlus配置
-          </div>
-<div>
-            <input type="checkbox" disabled checked="checked">Webhooks环境搭建
-          </div>
-<a class="btn" href="url"  title="title" target="_blank">Github Action</a>
-
-
-<h1 id="操作步骤"><a href="#操作步骤" class="headerlink" title="操作步骤"></a>操作步骤</h1><ol>
-<li>需要创建一个静态仓库,然后这个是等待被源码仓库Actions进行静态编译后的文件传输</li>
-<li>源码仓库主要存的是博客的源码,然后要记得创建workflows</li>
-<li>HexoPlusPlus就是关于一些列的文章仓库和图片仓库</li>
-<li>服务器中要安装(node.js,pm2)</li>
-</ol>
-<hr>
-<p>安装node.js指令<br>wget <a target="_blank" rel="noopener" href="https://nodejs.org/dist/v9.3.0/node-v9.3.0-linux-x64.tar.xz">https://nodejs.org/dist/v9.3.0/node-v9.3.0-linux-x64.tar.xz</a></p>
-<hr>
-<p>然后在root目录文件夹进行个解压即可<br>xz -d node-v9.3.0-linux-x64.tar.xz<br>tar -xf node-v9.3.0-linux-x64.tar</p>
-<p>接着进行部署bin文件<br>ln -s ~/node-v9.3.0-linux-x64/bin/node /usr/bin/node<br>ln -s ~/node-v9.3.0-linux-x64/bin/npm /usr/bin/npm</p>
-<p>测试安装完毕命令<br>node -v<br>npm </p>
-<p>在服务器中提前创建两个文件夹<br>webhook: 相当于大厅<br>web: 相当于房间</p>
-<p>然后在webhook文件夹下分别执行指令</p>
-<ol>
-<li>npm init -f</li>
-<li>npm i -S github-webhook-handler</li>
-<li>npm i pm2 -g</li>
-<li>ln -s /root/node-v9.3.0-linux-x64/lib/node_modules/pm2/bin/pm2 /usr/local/bin/</li>
-</ol>
-<h2 id="创建webhook-js"><a href="#创建webhook-js" class="headerlink" title="创建webhook.js"></a>创建webhook.js</h2><p>var http = require(‘http’)<br>var createHandler = require(‘github-webhook-handler’)<br>var handler = createHandler({ path: ‘/‘, secret: ‘secret’ })<br>// 上面的 secret 保持和 GitHub 后台设置的一致文章后面会提到。<br>function run_cmd(cmd, args, callback) {<br>  var spawn = require(‘child_process’).spawn;<br>  var child = spawn(cmd, args);<br>  var resp = “”;<br>  child.stdout.on(‘data’, function(buffer) { resp += buffer.toString(); });<br>  child.stdout.on(‘end’, function() { callback (resp) });<br>}<br>http.createServer(function (req, res) {<br>  handler(req, res, function (err) {<br>    res.statusCode = 404<br>    res.end(‘gggggggggg’)<br>  })<br>}).listen(7777)<br>handler.on(‘error’, function (err) {<br>  console.error(‘Error:’, err.message)<br>})<br>handler.on(‘push’, function (event) {<br>  console.log(‘Received a push event for %s to %s’,<br>    event.payload.repository.name,<br>    event.payload.ref);<br>    run_cmd(‘sh’, [‘./deploy.sh’,event.payload.repository.name], function(text){ console.log(text) });<br>})</p>
-<hr>
-<h2 id="创建脚本deploy-sh"><a href="#创建脚本deploy-sh" class="headerlink" title="创建脚本deploy.sh"></a>创建脚本deploy.sh</h2><p>#!/bin/bash<br>#网站的根目录,用自己的目录。<br>WEB_PATH=’/home/web/packblog’</p>
-<p>echo “start deployment”<br>cd $WEB_PATH<br>echo “fetching from remote…”</p>
-<p>#为了避免冲突，强制更新本地文件<br>git fetch –all<br>git reset –hard origin/master<br>echo “done”</p>
-<hr>
-<p>创建完后记得给权限<br>chmod 777 ./deploy.sh</p>
+              <h3 id="Network情况"><a href="#Network情况" class="headerlink" title="Network情况"></a>Network情况</h3><p>经过几天的优化，最终已经变成了这样<br><img src="https://unpkg.zhimg.com/packphoto@3.0.7/Life/9.png" srcset="https://unpkg.zhimg.com/packphoto@3.0.2/load.gif" lazyload></p>
 
             </div>
             <hr>
@@ -306,21 +256,15 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2022/01/11/3/">
+                      <a href="/2022/01/12/4/">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">My Life</span>
+                        <span class="hidden-mobile">体系化的自动部署</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
                   </article>
                   <article class="post-next col-6">
                     
-                    
-                      <a href="/2022/01/11/5/">
-                        <span class="hidden-mobile">晚安</span>
-                        <span class="visible-mobile">下一篇</span>
-                        <i class="iconfont icon-arrowright"></i>
-                      </a>
                     
                   </article>
                 </div>
@@ -377,8 +321,8 @@
 
 <script  src="https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js" ></script>
 <script  src="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/js/bootstrap.min.js" ></script>
-<script  src="https://unpkg.zhimg.com/pockjobs@1.0.2/events.js" ></script>
-<script  src="https://unpkg.zhimg.com/pockjobs@1.0.2/plugins.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/pockjobs@1.0.3/events.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/pockjobs@1.0.3/plugins.js" ></script>
 
 <!-- Plugins -->
 
@@ -387,7 +331,7 @@
 
   
     
-      <script  src="https://unpkg.zhimg.com/pockjobs@1.0.2/img-lazyload.js" ></script>
+      <script  src="https://cdn.jsdelivr.net/npm/pockjobs@1.0.3/img-lazyload.js" ></script>
     
   
 
@@ -441,7 +385,28 @@
 
 
 <!-- 主题的启动项 保持在最底部 -->
-<script  src="https://unpkg.zhimg.com/pockjobs@1.0.2/boot.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/pockjobs@1.0.3/boot.js" ></script>
+
+
+
+<script>
+if('serviceWorker' in navigator){
+    //判断浏览器是否支持
+    window.addEventListener('load',function(){
+       // window在加载的时候来注册“sw.js”这个文件。这个文件就是serviceWorker
+        navigator.serviceWorker.register('/sw.js',{scope: '/'})
+            .then(registration => {
+                // 返回一个promise
+                console.log("成功！");
+                console.log(registration)
+            })
+            .catch(err => {
+                console.log("失败")
+                console.log(err)
+            })
+    })
+}
+</script>
 
 
 </body>
